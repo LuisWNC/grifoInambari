@@ -1,0 +1,5 @@
+
+
+SELECT * FROM price;
+
+INSERT INTO price VALUES(1,1,1,'11.50')

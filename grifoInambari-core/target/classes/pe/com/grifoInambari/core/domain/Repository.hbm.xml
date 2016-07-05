@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="pe.com.grifoInambari.core.domain.Repository" table="repository">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+		<property name="code" type="string">
+			<column name="code" length="20" />
+		</property>
+		<property name="allGalones" type="double">
+			<column name="allGalones" length="5,2" />
+		</property>
+		<property name="combusMax" type="double">
+			<column name="combusMax" length="5,2" />
+		</property>
+		
+
+	</class>
+</hibernate-mapping>

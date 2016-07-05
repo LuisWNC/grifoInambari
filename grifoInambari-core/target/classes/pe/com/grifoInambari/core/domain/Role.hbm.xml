@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/06/2012 10:38:16 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="pe.com.grifoInambari.core.domain.Role" table="role">
+		<id name="id" type="java.lang.Long">
+			<column name="id" />
+			<generator class="identity" />
+		</id>
+
+		<property name="nameRole" type="string">
+			<column name="nameRole" length="30" />
+		</property>
+		<property name="description" type="string">
+			<column name="description" length="40" />
+		</property>
+		<property name="urlRole" type="string">
+			<column name="urlRole" length="20" />
+		</property>
+		        <many-to-one name="statusRole" class="pe.com.grifoInambari.core.domain.StatusRole" lazy="false" fetch="select">
+            <column name="status" />
+        </many-to-one>		
+
+	</class>
+</hibernate-mapping>
